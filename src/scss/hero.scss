@@ -11,7 +11,7 @@
     $hero-background-color-end 100%
   );
 
-  height: 100vh;
+  height: $hero-height;
 
   #hero-container {
     display: flex;
@@ -19,52 +19,54 @@
     align-items: center;
     text-align: center;
     height: 100%;
-    gap: 2rem;
+    gap: $hero-container-gap;
   }
 
   .presentation {
-    color: white;
+    color: $hero-text-color;
     display: flex;
     flex-direction: column;
     text-align: start;
-    h1 {
-      font-size: 60px;
-      margin-bottom: 1rem;
-      font-weight: 900;
-      font-family: Arial, Helvetica, sans-serif;
 
-      background: linear-gradient(to right, #ff7f00, #0000ff);
+    h1 {
+      font-size: $hero-title-font-size;
+      margin-bottom: $hero-title-margin-bottom;
+      font-weight: $hero-title-font-weight;
+      font-family: $hero-font-family;
+
+      background: linear-gradient(
+        to right,
+        $hero-title-gradient-start,
+        $hero-title-gradient-end
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
-      /* Pour les navigateurs modernes non-webkit */
       background-clip: text;
       color: transparent;
-
-      margin-bottom: 10px;
     }
+
     p {
-      font-size: 20px;
-      margin-bottom: 2rem;
-      font-weight: 400;
-      font-family: Arial, Helvetica, sans-serif;
+      font-size: $hero-paragraph-font-size;
+      margin-bottom: $hero-paragraph-margin-bottom;
+      font-weight: $hero-paragraph-font-weight;
+      font-family: $hero-font-family;
     }
 
     button {
-      background-color: transparent;
-      color: white;
-      border: none;
-      width: 200px;
-      font-size: 18px;
+      background-color: $hero-button-background;
+      color: $hero-button-text-color;
+      border: $hero-button-border;
+      width: $hero-button-width;
+      font-size: $hero-button-font-size;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: $hero-button-gap;
     }
   }
 
   img {
-    width: 300px;
-    border-radius: 50%;
+    width: $hero-image-width;
+    border-radius: $hero-image-border-radius;
   }
 }

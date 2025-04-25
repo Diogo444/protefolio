@@ -1,0 +1,56 @@
+/** @format */
+@font-face {
+  font-family: poppins;
+  src: url(/public/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(/public/fonts/Poppins/Poppins-Light.ttf);
+}
+
+#about {
+  overflow: hidden;
+  background-color: #0b0f19; // bleu nuit profond
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  font-family: poppins, sans-serif;
+
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .text {
+    flex: 1;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+  }
+
+  .illustration {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  }
+}
