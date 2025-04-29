@@ -1,44 +1,34 @@
 /** @format */
-@font-face {
-  font-family: poppins;
-  src: url(/public/fonts/Poppins/Poppins-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: poppins;
-  src: url(/public/fonts/Poppins/Poppins-Light.ttf);
-}
+@use "variables" as *;
 
 #about {
   overflow: hidden;
-  background-color: #0b0f19; // bleu nuit profond
-  color: white;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-
-  font-family: poppins, sans-serif;
+  background-color: $about-background-color;
+  color: $about-text-color;
+  font-family: $about-font-stack;
+  padding: 0 20px;
 
   .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 5% 10%;
-    width: 100%;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: $about-container-gap;
   }
 
   .text {
     flex: 1;
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      font-size: $about-title-font-size;
+      margin-bottom: $about-title-margin-bottom;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 600px;
+      font-size: $about-paragraph-font-size;
+      line-height: $about-paragraph-line-height;
+      max-width: $about-paragraph-max-width;
     }
   }
 
@@ -49,8 +39,31 @@
 
     img {
       width: 100%;
-      max-width: 500px;
+      max-width: $about-img-max-width;
       height: auto;
+    }
+  }
+
+  // ======== Responsive ========
+  @media screen and (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .text {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .illustration {
+      display: none;
     }
   }
 }

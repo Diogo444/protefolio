@@ -1,6 +1,9 @@
 /** @format */
-
 @use "variables" as *;
+
+.active {
+  transform: translateY(-50px);
+}
 
 header {
   position: fixed;
@@ -11,6 +14,7 @@ header {
   background-color: black;
   border-radius: 50px;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
 
   nav {
     height: 100%;
@@ -42,7 +46,7 @@ header {
       height: 100%;
 
       i {
-        transform: translateY(1px); // ajuste selon besoin (ex: 1px ou 2px)
+        transform: translateY(1px);
       }
     }
   }
@@ -53,5 +57,49 @@ header {
     font-size: 16px;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  // ======== RESPONSIVE ========
+  @media screen and (max-width: 800px) {
+    left: auto;
+    right: 20px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+
+    nav {
+      height: auto;
+    }
+
+    ul {
+      justify-content: flex-end;
+    }
+
+    .nav-item {
+      display: none;
+    }
+
+    .contact {
+      margin: 0;
+      padding: 10px 0;
+
+      a {
+        background-color: black;
+        border-radius: 999px;
+        padding: 8px 16px;
+        gap: 8px; // espace entre texte et flèche
+        font-size: 14px;
+
+        span {
+          display: inline; // on garde le texte visible
+        }
+
+        i {
+          transform: none;
+          font-size: 14px;
+        }
+      }
+    }
   }
 }

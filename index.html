@@ -14,6 +14,7 @@
       <ul>
         <li class="nav-item"><a href="#hero">Accueil</a></li>
         <li class="nav-item"><a href="#about">À propos</a></li>
+        <li class="nav-item"><a href="#skills">Compétences</a></li>
         <li class="nav-item"><a href="#projects">Projets</a></li>
         <li class="contact">
           <a href="mailto:da7822000@gmail.com" target="_blank">
@@ -39,7 +40,8 @@
         <div class="presentation">
           <h1>Diogo Andrade</h1>
           <p>Développeur Web Front-End</p>
-          <button><span>Voir mes projets </span><i class="fa-solid fa-arrow-right"></i></button>
+          <button onclick="window.location.href='#projects'"><span>Voir mes projets </span><i
+              class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
 
@@ -62,7 +64,148 @@
       </div>
     </section>
 
+    <section id="skills" class="skills">
+      <h1 class="skills__title">Compétences</h1>
+      <p class="skills__subtitle">Mes outils et technologies préférés</p>
+
+      <div class="skills__categories">
+        <!-- Front-End -->
+        <div class="skills__category">
+          <h2 class="skills__category-title">Front-End</h2>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <img src="public/svg/vite.svg" alt="ViteJS">
+            </li>
+            <li class="skills__item">
+              <i class="fa-brands fa-angular" style="color: #dd0031; width: 50px;" aria-hidden="true"></i>
+              <span class="sr-only">Angular</span>
+            </li>
+            <li class="skills__item">
+              <i class="fa-brands fa-js" style="color: #FFD43B;" aria-hidden="true"></i>
+              <span class="sr-only">JavaScript</span>
+            </li>
+            <li class="skills__item">
+              <img src="public/svg/typescript.svg" alt="TypeScript">
+            </li>
+            <li class="skills__item">
+              <i class="fa-brands fa-sass" style="color: #cc6699;" aria-hidden="true"></i>
+              <span class="sr-only">Sass</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Back-End -->
+        <div class="skills__category">
+          <h2 class="skills__category-title">Back-End</h2>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <i class="fa-brands fa-symfony" aria-hidden="true"></i>
+              <span class="sr-only">Symfony</span>
+            </li>
+            <li class="skills__item">
+              <i class="fa-brands fa-docker" style="color: #537783;" aria-hidden="true"></i>
+              <span class="sr-only">Docker</span>
+            </li>
+            <li class="skills__item">
+              <i class="fa-brands fa-php" aria-hidden="true"></i>
+              <span class="sr-only">PHP</span>
+            </li>
+            <li class="skills__item">
+              <i class="fa-brands fa-node" style="color: #339933;" aria-hidden="true"></i>
+              <span class="sr-only">Node.js</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Mes projets</h2>
+        <p>Une sélection de réalisations pro et perso que j'ai construites avec passion.</p>
+
+        <div class="projects-grid">
+          <!-- Exemple de carte -->
+          <article class="project-card">
+            <img src="public/img/projects/Miam DV.png" alt="Aperçu du projet Miam DV" class="project-card__img">
+
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Miam DV</h3>
+              <p class="project-card__desc">Miam DV est une application accessible qui propose aux membres du CRDV
+                menus, recettes et actualités dans une expérience conviviale.</p>
+              <ul class="project-card__techno">
+                <li class="techno-angular" aria-label="Angular"><i class="fa-brands fa-angular"></i></li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="public/img/projects/Formulaire.png" alt class="project-card__img">
+
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Projet formulaire</h3>
+              <p class="project-card__desc">Création d'une application interne de formulaires de suivi d'achat avec
+                Angular, SurveyJS et authentification Active Directory.</p>
+              <ul class="project-card__techno">
+                <li class="techno-angular" aria-label="Angular"><i class="fa-brands fa-angular"></i></li>
+                <li aria-label="SuveyJS"><img src="public/svg/surveyJS.svg" alt> </li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="public/img/projects/plateau.png" alt class="project-card__img">
+
+            <div class="project-card__overlay">
+              <h3 class="project-card__title">Jeu de plateau</h3>
+              <p class="project-card__desc">Jeu de plateau textuel accessible en synthèse vocale, développé en Node.js,
+                où l'objectif est d'atteindre l'arrivée en un minimum de coups en suivant des cases et des flèches.</p>
+              <ul class="project-card__techno">
+                <li aria-label="Angular"><i class="fa-brands fa-node" style="color: #6cc24a;"></i></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- /Exemple de carte -->
+
+          <!-- Répéter .project-card pour chaque projet -->
+        </div>
+      </div>
+    </section>
+
+
+
+
+
   </main>
+
+  <footer class="footer">
+    <div class="footer__icons">
+      <a href="https://github.com/Diogo444" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:da7822000@gmail.com" target="_blank" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <p class="footer__tagline">
+      Développeur web passionné par les interfaces modernes et accessibles.
+    </p>
+
+    <nav class="footer__nav">
+      <a href="#hero">Accueil</a>
+      <span class="separator">|</span>
+      <a href="#about">À propos</a>
+      <span class="separator">|</span>
+      <a href="#skills">Compétences</a>
+      <span class="separator">|</span>
+      <a href="#projects">Projets</a>
+    </nav>
+
+    <p class="footer__copyright">
+      © 2025 Diogo Andrade — Tous droits réservés
+    </p>
+  </footer>
+
   <script type="module" src="src/main.js"></script>
 </body>
 

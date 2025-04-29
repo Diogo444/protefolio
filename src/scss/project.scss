@@ -1,0 +1,223 @@
+/** @format */
+@use "variables" as *;
+
+// === Fonts ===
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+// === Section Projets ===
+#projects {
+  background: linear-gradient(to bottom, #0b0f19, #000);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .projects-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: #111;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover .project-card__img {
+      transform: scale(1.1);
+    }
+    &__img {
+      aspect-ratio: 16 / 9; // ou 4 / 3, selon le style désiré
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.4);
+      backdrop-filter: blur(5px);
+      color: #fff;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      transform: scale(1);
+      pointer-events: none;
+    }
+
+    &:hover .project-card__overlay {
+      opacity: 1;
+      transform: scale(1.03);
+      pointer-events: all;
+    }
+
+    &.project-card--active .project-card__overlay {
+      opacity: 1 !important;
+      transform: scale(1.03) !important;
+      pointer-events: all !important;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    &__desc {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #ddd;
+      max-width: 90%;
+      font-weight: 400;
+    }
+
+    &__techno {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        line-height: 1;
+
+        i {
+          display: block;
+        }
+
+        img {
+          height: 1.8rem;
+          width: auto;
+          display: block;
+        }
+      }
+
+      .techno-angular {
+        color: #dd0031;
+      }
+
+      .techno-js {
+        color: #ffd43b;
+      }
+
+      .techno-sass {
+        color: #cc6699;
+      }
+    }
+  }
+
+  .project-card--active {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  // === Responsive ===
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-card__title {
+      font-size: 1.4rem;
+    }
+
+    .project-card__desc {
+      font-size: 0.95rem;
+    }
+
+    .project-card__techno li {
+      font-size: 1.5rem;
+    }
+
+    .project-card {
+      &:hover .project-card__overlay {
+        opacity: 0 !important;
+        transform: scale(1) !important;
+        pointer-events: none !important;
+      }
+
+      &.project-card--active .project-card__overlay {
+        opacity: 1 !important;
+        transform: scale(1.03) !important;
+        pointer-events: all !important;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 3rem 1rem;
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

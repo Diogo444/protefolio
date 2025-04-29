@@ -34,3 +34,25 @@ $hero-button-gap: 10px;
 
 $hero-image-width: 300px;
 $hero-image-border-radius: 50%;
+
+// About section
+// Fonts
+$about-font-family: "poppins";
+$about-font-stack: "poppins", sans-serif;
+$about-font-semibold: "/public/fonts/Poppins/Poppins-SemiBold.ttf";
+$about-font-light: "/public/fonts/Poppins/Poppins-Light.ttf";
+
+// Colors
+$about-background-color: #0b0f19; // Bleu nuit profond
+$about-text-color: white;
+
+// Sizes
+$about-height: 100vh;
+$about-container-padding: 5% 10%;
+$about-container-gap: 2rem;
+$about-title-font-size: 2.5rem;
+$about-title-margin-bottom: 1.5rem;
+$about-paragraph-font-size: 1.1rem;
+$about-paragraph-line-height: 1.8;
+$about-paragraph-max-width: 600px;
+$about-img-max-width: 500px;

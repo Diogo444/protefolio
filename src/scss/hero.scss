@@ -10,63 +10,105 @@
     $hero-background-color-3 75%,
     $hero-background-color-end 100%
   );
-
   height: $hero-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   #hero-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 100%;
+    justify-content: center;
     gap: $hero-container-gap;
-  }
+    text-align: center;
 
-  .presentation {
-    color: $hero-text-color;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-
-    h1 {
-      font-size: $hero-title-font-size;
-      margin-bottom: $hero-title-margin-bottom;
-      font-weight: $hero-title-font-weight;
-      font-family: $hero-font-family;
-
-      background: linear-gradient(
-        to right,
-        $hero-title-gradient-start,
-        $hero-title-gradient-end
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
+    .photo-profile img {
+      width: $hero-image-width;
+      border-radius: $hero-image-border-radius;
     }
 
-    p {
-      font-size: $hero-paragraph-font-size;
-      margin-bottom: $hero-paragraph-margin-bottom;
-      font-weight: $hero-paragraph-font-weight;
-      font-family: $hero-font-family;
-    }
-
-    button {
-      background-color: $hero-button-background;
-      color: $hero-button-text-color;
-      border: $hero-button-border;
-      width: $hero-button-width;
-      font-size: $hero-button-font-size;
-      cursor: pointer;
+    .presentation {
+      color: $hero-text-color;
       display: flex;
-      align-items: center;
-      gap: $hero-button-gap;
+      flex-direction: column;
+      text-align: start;
+
+      h1 {
+        font-size: $hero-title-font-size;
+        margin-bottom: $hero-title-margin-bottom;
+        font-weight: $hero-title-font-weight;
+        font-family: $hero-font-family;
+        background: linear-gradient(
+          to right,
+          $hero-title-gradient-start,
+          $hero-title-gradient-end
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      p {
+        font-size: $hero-paragraph-font-size;
+        margin-bottom: $hero-paragraph-margin-bottom;
+        font-weight: $hero-paragraph-font-weight;
+        font-family: $hero-font-family;
+      }
+
+      button {
+        background-color: $hero-button-background;
+        color: $hero-button-text-color;
+        border: $hero-button-border;
+        width: $hero-button-width;
+        font-size: $hero-button-font-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $hero-button-gap;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 999px;
+
+        i {
+          transform: translateX(2px);
+        }
+      }
     }
   }
 
-  img {
-    width: $hero-image-width;
-    border-radius: $hero-image-border-radius;
+  // ========== RESPONSIVE ==========
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 60px 20px;
+
+    #hero-container {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+
+      .presentation {
+        align-items: center;
+        text-align: center;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        button {
+          width: auto;
+          padding: 10px 24px;
+          font-size: 0.95rem;
+        }
+      }
+
+      .photo-profile img {
+        width: 160px;
+      }
+    }
   }
 }

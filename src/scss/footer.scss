@@ -1,0 +1,68 @@
+/** @format */
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  src: url("../fonts/Poppins-Light.ttf") format("truetype");
+}
+
+.footer {
+  background: linear-gradient(
+    to top,
+    #000000,
+    #0d0f18
+  ); // fond sombre progressif
+  color: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+
+  .footer__icons {
+    margin-bottom: 1rem;
+
+    a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      color: #ffffff;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ff7b00; // couleur au survol
+      }
+    }
+  }
+
+  .footer__tagline {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .footer__nav {
+    margin-bottom: 1.5rem;
+
+    a {
+      color: #ffffff;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-weight: 400;
+      font-family: "Poppins", sans-serif;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .separator {
+      color: #666;
+      margin: 0 0.3rem;
+    }
+  }
+
+  .footer__copyright {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+}
